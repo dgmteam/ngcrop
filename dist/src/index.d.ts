@@ -1,0 +1,1 @@
+export { NgCropModule } from './module';

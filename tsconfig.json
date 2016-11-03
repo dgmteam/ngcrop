@@ -12,7 +12,8 @@
 		"allowSyntheticDefaultImports": true,
 		"strictNullChecks": false,
 		"lib": ["es6", "dom"],
-		"baseUrl": "./src/app/" 
+		"baseUrl": "./src/app/" ,
+		"declaration": true
 	},
 	"awesomeTypescriptLoaderOptions": {
 		"useWebpackText": true,
