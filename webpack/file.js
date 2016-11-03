@@ -2,8 +2,7 @@ const { removeEmpty } = require('./helpers')
 
 module.exports = (env) => ({
 	module: {
-		loaders: [
-		{
+		loaders: [{
 			test: /\.json$/,
 			loader: 'json',
 		}, {
@@ -13,8 +12,7 @@ module.exports = (env) => ({
 		}, {
 			test: /\.(jpe?g|png|gif|svg)$/i,
 			loaders: removeEmpty([
-				'file?hash=sha512&digest=hex&name=[hash].[ext]',
-				env.prod ? 'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false' : undefined,
+				'file?name=[name].[ext]',
 			]),
 		}],
 	},

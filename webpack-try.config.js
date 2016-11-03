@@ -6,6 +6,7 @@ const devServer = require('./webpack/dev-server')
 const typescript = require('./webpack/typescript')
 const pug = require('./webpack/pug')
 const sass = require('./webpack/sass')
+const file = require('./webpack/file')
 const production = require('./webpack/production')
 
 const DEV_PORT = 3000
@@ -54,8 +55,9 @@ module.exports = (env = {}) => {
 		},
 		devServer(DEV_PORT),
 		typescript(),
-		pug(root('src/app')),
-		sass(root('src/app/styles')),
+		pug(root('example')),
+		sass(),
+		file(env),
 		production(env)
 	)
 

@@ -5,16 +5,20 @@
   "main": "dist/index.js",
   "scripts": {
     "try": "webpack-dev-server --config ./webpack-try.config.js",
-		"prebuild": "rimraf ./dist",
+    "prebuild": "rimraf ./dist",
     "build": "webpack --config ./webpack-build.config.js --env.prod"
   },
-  "keywords": ["image", "cropper", "cropperjs"],
+  "keywords": [
+    "image",
+    "cropper",
+    "cropperjs"
+  ],
   "author": "DgmTeam",
   "license": "WTFPL",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/mahpah/ngcrop"
-	},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mahpah/ngcrop"
+  },
   "devDependencies": {
     "@angular/platform-browser-dynamic": "^2.1.2",
     "@types/cropperjs": "^0.0.22",
@@ -23,12 +27,15 @@
     "awesome-typescript-loader": "^2.2.4",
     "codelyzer": "^1.0.0-beta.3",
     "css-loader": "^0.25.0",
+    "css-to-string-loader": "^0.1.2",
     "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "file-loader": "^0.9.0",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.24.1",
     "node-sass": "3.10.0",
     "pug": "^2.0.0-beta6",
     "pug-html-loader": "1.0.7",
+    "resolve-url-loader": "^1.6.0",
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.2",
     "ts-helpers": "^1.1.2",
@@ -43,6 +50,7 @@
     "@angular/core": "^2.1.2",
     "@angular/forms": "^2.1.2",
     "@angular/platform-browser": "^2.1.2",
+    "angular2-modal": "^2.0.1",
     "core-js": "^2.4.1",
     "cropperjs": "^0.8.1",
     "pug-html-loader": "1.0.7",

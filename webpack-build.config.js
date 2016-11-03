@@ -49,8 +49,8 @@ module.exports = (env = {}) => {
 		},
 		devServer(DEV_PORT),
 		typescript(),
-		pug(root('src/app')),
-		sass(root('src/app/styles')),
+		pug(root('src')),
+		sass(),
 		production(env)
 	)
 
