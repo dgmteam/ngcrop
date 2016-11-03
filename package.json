@@ -3,7 +3,8 @@
   "version": "0.0.2-alpha.1",
   "description": "",
   "main": "dist/index.js",
-	"module": "dist/src/index.d.ts",
+  "module": "dist/index.js",
+	"typings": "dist/src/index.d.ts",
   "scripts": {
     "try": "webpack-dev-server --config ./webpack-try.config.js",
     "prebuild": "rimraf ./dist",

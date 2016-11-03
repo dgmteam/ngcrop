@@ -5,8 +5,6 @@ const devServer = require('./webpack/dev-server')
 const typescript = require('./webpack/typescript')
 const pug = require('./webpack/pug')
 const sass = require('./webpack/sass')
-const production = require('./webpack/production')
-
 const DEV_PORT = 3000
 
 module.exports = (env = {}) => {
@@ -16,6 +14,8 @@ module.exports = (env = {}) => {
 	}
 
 	const output = {
+		library: 'ngcrop',
+		libraryTarget: 'commonjs2',
 		filename: '[name].js',
 		chunkFilename: '[id].part.js',
 		path: root('./dist'),
@@ -50,8 +50,7 @@ module.exports = (env = {}) => {
 		devServer(DEV_PORT),
 		typescript(),
 		pug(root('src')),
-		sass(),
-		production(env)
+		sass()
 	)
 
 	return config
