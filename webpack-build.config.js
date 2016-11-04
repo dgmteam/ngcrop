@@ -15,7 +15,7 @@ module.exports = (env = {}) => {
 
 	const output = {
 		library: 'ngcrop',
-		libraryTarget: 'commonjs2',
+		libraryTarget: 'umd',
 		filename: '[name].js',
 		chunkFilename: '[id].part.js',
 		path: root('./dist'),

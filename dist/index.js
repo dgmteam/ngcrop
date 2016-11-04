@@ -1,5 +1,14 @@
-module.exports =
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("@angular/common"), require("@angular/core"), require("@angular/forms"), require("@angular/platform-browser"), require("angular2-modal"), require("angular2-modal/plugins/bootstrap"), require("cropperjs"));
+	else if(typeof define === 'function' && define.amd)
+		define(["@angular/common", "@angular/core", "@angular/forms", "@angular/platform-browser", "angular2-modal", "angular2-modal/plugins/bootstrap", "cropperjs"], factory);
+	else if(typeof exports === 'object')
+		exports["ngcrop"] = factory(require("@angular/common"), require("@angular/core"), require("@angular/forms"), require("@angular/platform-browser"), require("angular2-modal"), require("angular2-modal/plugins/bootstrap"), require("cropperjs"));
+	else
+		root["ngcrop"] = factory(root["@angular/common"], root["@angular/core"], root["@angular/forms"], root["@angular/platform-browser"], root["angular2-modal"], root["angular2-modal/plugins/bootstrap"], root["cropperjs"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_17__, __WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_18__, __WEBPACK_EXTERNAL_MODULE_19__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_4__, __WEBPACK_EXTERNAL_MODULE_20__) {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -69,7 +78,7 @@ module.exports =
 /* 0 */
 /***/ function(module, exports) {
 
-module.exports = require("@angular/core");
+module.exports = __WEBPACK_EXTERNAL_MODULE_0__;
 
 /***/ },
 /* 1 */
@@ -131,7 +140,7 @@ module.exports = function() {
 /* 2 */
 /***/ function(module, exports) {
 
-module.exports = require("angular2-modal");
+module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
 
 /***/ },
 /* 3 */
@@ -180,7 +189,7 @@ exports.ImageCropperModal = ImageCropperModal;
 /* 4 */
 /***/ function(module, exports) {
 
-module.exports = require("angular2-modal/plugins/bootstrap");
+module.exports = __WEBPACK_EXTERNAL_MODULE_4__;
 
 /***/ },
 /* 5 */
@@ -639,25 +648,25 @@ exports.InputImageCrop = InputImageCrop;
 /* 17 */
 /***/ function(module, exports) {
 
-module.exports = require("@angular/common");
+module.exports = __WEBPACK_EXTERNAL_MODULE_17__;
 
 /***/ },
 /* 18 */
 /***/ function(module, exports) {
 
-module.exports = require("@angular/forms");
+module.exports = __WEBPACK_EXTERNAL_MODULE_18__;
 
 /***/ },
 /* 19 */
 /***/ function(module, exports) {
 
-module.exports = require("@angular/platform-browser");
+module.exports = __WEBPACK_EXTERNAL_MODULE_19__;
 
 /***/ },
 /* 20 */
 /***/ function(module, exports) {
 
-module.exports = require("cropperjs");
+module.exports = __WEBPACK_EXTERNAL_MODULE_20__;
 
 /***/ },
 /* 21 */
@@ -670,5 +679,7 @@ exports.NgCropModule = module_1.NgCropModule;
 
 
 /***/ }
-/******/ ]);
+/******/ ])
+});
+;
 //# sourceMappingURL=index.js.map
