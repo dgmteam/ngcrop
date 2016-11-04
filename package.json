@@ -1,10 +1,10 @@
 {
   "name": "@digimed/ngcrop",
-  "version": "0.0.2-alpha.2",
+  "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
-	"typings": "dist/src/index.d.ts",
+  "typings": "dist/src/index.d.ts",
   "scripts": {
     "try": "webpack-dev-server --config ./webpack-try.config.js",
     "prebuild": "rimraf ./dist",
@@ -41,11 +41,12 @@
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.2",
     "ts-helpers": "^1.1.2",
+    "ts-loader": "^1.0.0",
+    "tslint": "^3.15.1",
     "typescript": "^2.0.6",
     "webpack": "2.1.0-beta.25",
     "webpack-dev-server": "2.1.0-beta.10",
-    "webpack-merge": "^0.15.0",
-    "tslint": "^3.15.1"
+    "webpack-merge": "^0.15.0"
   },
   "dependencies": {
     "@angular/common": "^2.1.2",

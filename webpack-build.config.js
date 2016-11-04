@@ -15,7 +15,7 @@ module.exports = (env = {}) => {
 
 	const output = {
 		library: 'ngcrop',
-		libraryTarget: 'umd',
+		libraryTarget: 'commonjs2',
 		filename: '[name].js',
 		chunkFilename: '[id].part.js',
 		path: root('./dist'),
@@ -46,6 +46,7 @@ module.exports = (env = {}) => {
 		'@angular/forms': '@angular/forms',
 		'@angular/platform-browser': '@angular/platform-browser',
 		'angular2-modal': 'angular2-modal',
+		'angular2-modal/plugins/bootstrap': 'angular2-modal/plugins/bootstrap',
 		'core-js': 'core-js',
 		'cropperjs': 'cropperjs',
 		'rxjs': 'rxjs',
