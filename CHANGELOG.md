@@ -1,3 +1,13 @@
+<a name="0.0.1-alpha.1"></a>
+## [0.0.1-alpha.1](https://github.com/mahpah/ngcrop/compare/v0.0.1-alpha.0...v0.0.1-alpha.1) (2016-11-04)
+
+
+### Bug Fixes
+
+* **cropper modal:** error when close modal ([0da3285](https://github.com/mahpah/ngcrop/commit/0da3285))
+
+
+
 <a name="0.0.1-alpha.0"></a>
 ## 0.0.1-alpha.0 (2016-11-04)
 
