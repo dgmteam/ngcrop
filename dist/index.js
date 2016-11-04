@@ -518,6 +518,7 @@ var InputImageCrop = (function () {
             .then(function (result) {
             if (!result) {
                 input.value = '';
+                return;
             }
             _this.cropbox = result.cropData;
             return _this.updateValue(result);
