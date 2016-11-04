@@ -1,6 +1,6 @@
 {
-  "name": "@digimed/ngcrop",
-  "version": "0.0.1",
+  "name": "@digimed/bs3-ngcrop",
+  "version": "0.0.1-alpha.0",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -8,14 +8,15 @@
   "scripts": {
     "try": "webpack-dev-server --config ./webpack-try.config.js",
     "prebuild": "rimraf ./dist",
-    "build": "webpack --config ./webpack-build.config.js --env.prod"
+    "build": "webpack --config ./webpack-build.config.js --env.prod",
+		"changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "keywords": [
     "image",
     "cropper",
     "cropperjs"
   ],
-  "author": "DgmTeam",
+  "author": "DgmTeam <mahpahh@gmail.com>",
   "license": "WTFPL",
   "repository": {
     "type": "git",

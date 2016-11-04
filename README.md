@@ -1,5 +1,11 @@
 # Angular2 component wrapper for CropperJS
 
+## Dependencies
+
+This component require
+- [angular2-modal](https://github.com/shlomiassaf/angular2-modal)
+- bootstrap 3 with modal included
+
 ## License
 ```
 					DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
