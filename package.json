@@ -5,8 +5,11 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
   "scripts": {
-    "try": "webpack-dev-server --config ./webpack-try.config.js",
+    "dev": "webpack-dev-server --config ./webpack-dev.config.js",
     "prebuild": "rimraf ./dist",
     "build": "webpack --config ./webpack-build.config.js --env.prod",
 		"changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"

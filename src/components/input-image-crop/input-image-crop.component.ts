@@ -85,6 +85,7 @@ export class InputImageCrop implements ControlValueAccessor {
 			.then(result => {
 				if (!result) { // clear input
 					input.value = ''
+					return
 				}
 				this.cropbox = result.cropData
 				return this.updateValue(result)

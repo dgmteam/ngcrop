@@ -9,7 +9,7 @@ const sass = require('./webpack/sass')
 const file = require('./webpack/file')
 const production = require('./webpack/production')
 
-const DEV_PORT = 3000
+const DEV_PORT = 8080
 
 module.exports = (env = {}) => {
 	const context = root('./example')
