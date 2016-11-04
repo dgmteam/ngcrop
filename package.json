@@ -1,5 +1,5 @@
 {
-  "name": "@digimed/bs3-ngcrop",
+  "name": "dgm-bs3-ngcrop",
   "version": "0.0.1-alpha.0",
   "description": "",
   "main": "dist/index.js",
