@@ -7,14 +7,22 @@
 		"sourceMap": true,
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
-		"noEmitHelpers": true,
+		"noEmitHelpers": false,
 		"noEmitOnError": false,
 		"allowSyntheticDefaultImports": true,
 		"strictNullChecks": false,
 		"lib": ["es6", "dom"],
-		"baseUrl": "./src/app/" ,
-		"declaration": true
+		"baseUrl": "./src" ,
+		"declaration": true,
+		"outDir": "dist",
+		"mapRoot": "./src",
+		"stripInternal": true,
+    "inlineSources": true,
+		"skipLibCheck": true
 	},
+	"angularCompilerOptions": {
+    "genDir": "./dist"
+  },
 	"awesomeTypescriptLoaderOptions": {
 		"useWebpackText": true,
 		"forkChecker": true

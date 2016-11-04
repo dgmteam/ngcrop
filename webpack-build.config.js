@@ -15,7 +15,7 @@ module.exports = (env = {}) => {
 
 	const output = {
 		library: 'ngcrop',
-		libraryTarget: 'commonjs2',
+		libraryTarget: 'umd',
 		filename: '[name].js',
 		chunkFilename: '[id].part.js',
 		path: root('./dist'),
@@ -38,6 +38,21 @@ module.exports = (env = {}) => {
 		),
 	]
 
+	/* eslint-disable */
+	const externals = {
+		'@angular/common': '@angular/common',
+		'@angular/compiler': '@angular/compiler',
+		'@angular/core': '@angular/core',
+		'@angular/forms': '@angular/forms',
+		'@angular/platform-browser': '@angular/platform-browser',
+		'angular2-modal': 'angular2-modal',
+		'core-js': 'core-js',
+		'cropperjs': 'cropperjs',
+		'rxjs': 'rxjs',
+		'zone.js': 'zone.js',
+	}
+	/* eslint-enable */
+
 	const config = merge(
 		{
 			context,
@@ -45,6 +60,7 @@ module.exports = (env = {}) => {
 			entry,
 			output,
 			plugins,
+			externals,
 			devtool: 'source-map',
 		},
 		devServer(DEV_PORT),
