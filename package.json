@@ -5,14 +5,14 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
-	"files": [
-		"dist"
-	],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "webpack-dev-server --config ./webpack-dev.config.js",
     "prebuild": "rimraf ./dist",
     "build": "webpack --config ./webpack-build.config.js --env.prod",
-		"changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "keywords": [
     "image",
@@ -58,10 +58,12 @@
     "@angular/core": "^2.1.2",
     "@angular/forms": "^2.1.2",
     "@angular/platform-browser": "^2.1.2",
-    "angular2-modal": "^2.0.1",
     "core-js": "^2.4.1",
     "cropperjs": "^0.8.1",
     "rxjs": "5.0.0-beta.12",
     "zone.js": "^0.6.26"
+  },
+  "peerDependencies": {
+    "angular2-modal": "^2.0.1"
   }
 }
