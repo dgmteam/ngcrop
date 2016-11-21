@@ -1,3 +1,13 @@
+<a name="0.0.1-alpha.3"></a>
+## [0.0.1-alpha.3](https://github.com/mahpah/ngcrop/compare/v0.0.1-alpha.0...v0.0.1-alpha.3) (2016-11-21)
+
+
+### Features
+
+* **module:** export inline cropper separated ([84693c6](https://github.com/mahpah/ngcrop/commit/84693c6))
+
+
+
 <a name="0.0.1-alpha.2"></a>
 ## [0.0.1-alpha.2](https://github.com/mahpah/ngcrop/compare/v0.0.1-alpha.0...v0.0.1-alpha.2) (2016-11-04)
 
