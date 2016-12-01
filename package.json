@@ -1,6 +1,6 @@
 {
   "name": "dgm-bs3-ngcrop",
-  "version": "0.0.1-alpha.3",
+  "version": "0.0.2",
   "description": "Angular2 component wrapper for CropperJS",
   "main": "dist/index.js",
   "module": "dist/index.js",

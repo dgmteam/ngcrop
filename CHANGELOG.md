@@ -1,3 +1,20 @@
+<a name="0.0.2"></a>
+## [0.0.2](https://github.com/mahpah/ngcrop/compare/v0.0.1-alpha.0...v0.0.2) (2016-12-01)
+
+
+### Bug Fixes
+
+* lol, forgot building ([b5122f9](https://github.com/mahpah/ngcrop/commit/b5122f9))
+* **cropper modal:** error when close modal ([0da3285](https://github.com/mahpah/ngcrop/commit/0da3285))
+* **export:** not export inline cropper ([ef369ed](https://github.com/mahpah/ngcrop/commit/ef369ed))
+
+
+### Features
+
+* **module:** export inline cropper separated ([84693c6](https://github.com/mahpah/ngcrop/commit/84693c6))
+
+
+
 <a name="0.0.1-alpha.3"></a>
 ## [0.0.1-alpha.3](https://github.com/mahpah/ngcrop/compare/v0.0.1-alpha.0...v0.0.1-alpha.3) (2016-11-21)
 
