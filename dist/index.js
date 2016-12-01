@@ -7,7 +7,7 @@
 		exports["ngcrop"] = factory(require("@angular/common"), require("@angular/core"), require("@angular/forms"), require("@angular/platform-browser"), require("angular2-modal"), require("angular2-modal/plugins/bootstrap"), require("cropperjs"));
 	else
 		root["ngcrop"] = factory(root["@angular/common"], root["@angular/core"], root["@angular/forms"], root["@angular/platform-browser"], root["angular2-modal"], root["angular2-modal/plugins/bootstrap"], root["cropperjs"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_17__, __WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_18__, __WEBPACK_EXTERNAL_MODULE_19__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_4__, __WEBPACK_EXTERNAL_MODULE_20__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_5__, __WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_19__, __WEBPACK_EXTERNAL_MODULE_20__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_21__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -71,7 +71,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 21);
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -149,8 +149,39 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
 "use strict";
 "use strict";
 var core_1 = __webpack_require__(0);
+var common_1 = __webpack_require__(5);
+var image_cropper_component_1 = __webpack_require__(17);
+var InlineCropperModule = (function () {
+    function InlineCropperModule() {
+    }
+    InlineCropperModule = __decorate([
+        core_1.NgModule({
+            imports: [
+                common_1.CommonModule,
+            ],
+            declarations: [
+                image_cropper_component_1.ImageCropper,
+            ],
+            exports: [
+                image_cropper_component_1.ImageCropper,
+            ],
+        }), 
+        __metadata('design:paramtypes', [])
+    ], InlineCropperModule);
+    return InlineCropperModule;
+}());
+exports.InlineCropperModule = InlineCropperModule;
+
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var core_1 = __webpack_require__(0);
 var angular2_modal_1 = __webpack_require__(2);
-var bootstrap_1 = __webpack_require__(4);
+var bootstrap_1 = __webpack_require__(6);
 var ImageCropperModalContext = (function (_super) {
     __extends(ImageCropperModalContext, _super);
     function ImageCropperModalContext() {
@@ -176,7 +207,7 @@ var ImageCropperModal = (function () {
             selector: 'image-cropper-modal',
             providers: [],
             // styles: [require('./image-cropper-modal.component.scss')],
-            template: __webpack_require__(13),
+            template: __webpack_require__(15),
         }), 
         __metadata('design:paramtypes', [angular2_modal_1.DialogRef])
     ], ImageCropperModal);
@@ -186,23 +217,29 @@ exports.ImageCropperModal = ImageCropperModal;
 
 
 /***/ },
-/* 4 */
+/* 5 */
 /***/ function(module, exports) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE_4__;
+module.exports = __WEBPACK_EXTERNAL_MODULE_5__;
 
 /***/ },
-/* 5 */
+/* 6 */
+/***/ function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_6__;
+
+/***/ },
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 "use strict";
 var core_1 = __webpack_require__(0);
-var common_1 = __webpack_require__(17);
-var image_cropper_component_1 = __webpack_require__(15);
-var input_image_crop_component_1 = __webpack_require__(16);
-var image_cropper_modal_component_1 = __webpack_require__(3);
+var common_1 = __webpack_require__(5);
+var input_image_crop_component_1 = __webpack_require__(18);
+var image_cropper_modal_component_1 = __webpack_require__(4);
 var angular2_modal_1 = __webpack_require__(2);
+var inline_cropper_module_1 = __webpack_require__(3);
 var NgCropModule = (function () {
     function NgCropModule() {
     }
@@ -211,14 +248,14 @@ var NgCropModule = (function () {
             imports: [
                 common_1.CommonModule,
                 angular2_modal_1.ModalModule,
+                inline_cropper_module_1.InlineCropperModule,
             ],
             declarations: [
-                image_cropper_component_1.ImageCropper,
                 image_cropper_modal_component_1.ImageCropperModal,
                 input_image_crop_component_1.InputImageCrop,
             ],
             exports: [
-                image_cropper_component_1.ImageCropper,
+                inline_cropper_module_1.InlineCropperModule,
                 image_cropper_modal_component_1.ImageCropperModal,
                 input_image_crop_component_1.InputImageCrop,
             ],
@@ -234,7 +271,7 @@ exports.NgCropModule = NgCropModule;
 
 
 /***/ },
-/* 6 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)();
@@ -248,7 +285,7 @@ exports.push([module.i, "/*!\n * Cropper.js v0.8.1\n * https://github.com/fengyu
 
 
 /***/ },
-/* 7 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)();
@@ -262,7 +299,7 @@ exports.push([module.i, ":host {\n  display: block;\n}\n\nimg {\n  max-height: 5
 
 
 /***/ },
-/* 8 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)();
@@ -274,40 +311,6 @@ exports.push([module.i, ":host {\n  display: block;\n  overflow: hidden;\n  posi
 
 // exports
 
-
-/***/ },
-/* 9 */
-/***/ function(module, exports, __webpack_require__) {
-
-// css-to-string-loader: transforms styles from css-loader to a string output
-
-// Get the styles
-var styles = __webpack_require__(6);
-
-if (typeof styles === 'string') {
-  // Return an existing string
-  module.exports = styles;
-} else {
-  // Call the custom toString method from css-loader module
-  module.exports = styles.toString();
-}
-
-/***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
-
-// css-to-string-loader: transforms styles from css-loader to a string output
-
-// Get the styles
-var styles = __webpack_require__(7);
-
-if (typeof styles === 'string') {
-  // Return an existing string
-  module.exports = styles;
-} else {
-  // Call the custom toString method from css-loader module
-  module.exports = styles.toString();
-}
 
 /***/ },
 /* 11 */
@@ -328,29 +331,63 @@ if (typeof styles === 'string') {
 
 /***/ },
 /* 12 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-module.exports = "<div class=\"wrapper\"><div class=\"loading-block loader\" *ngIf=\"isLoading\"><div class=\"spinner\"></div></div><div class=\"alert alert-warning\" *ngIf=\"loadError\">{{ loadImageErrorText }}</div><div class=\"cropper\"><img #image alt=\"image\" [src]=\"imageUrl\" (load)=\"imageLoaded($event)\" crossorigin=\"anonymous\" (error)=\"imageLoadError($event)\"></div></div>";
+// css-to-string-loader: transforms styles from css-loader to a string output
+
+// Get the styles
+var styles = __webpack_require__(9);
+
+if (typeof styles === 'string') {
+  // Return an existing string
+  module.exports = styles;
+} else {
+  // Call the custom toString method from css-loader module
+  module.exports = styles.toString();
+}
 
 /***/ },
 /* 13 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-module.exports = "<div class=\"modal-content\"><div class=\"modal-header\"><button class=\"close\" type=\"button\" (click)=\"dialog.dismiss()\"></button><h4 class=\"modal-title\">{{ context.modalTitle }}</h4></div><div class=\"modal-body\" #body style=\"min-height:250px;padding:0\"><image-cropper #cropper style=\"width: 100%\" [imageUrl]=\"context.imageUrl\" (export)=\"saveData($event)\" [settings]=\"context.settings\" [cropbox]=\"context.cropbox\"></image-cropper></div><div class=\"modal-footer\"><button class=\"btn btn-default\" type=\"button\" (click)=\"dialog.dismiss()\">{{ context.buttonCloseCaption }}</button><button class=\"btn btn-primary\" (click)=\"cropper.exportCanvas()\" type=\"button\" [disabled]=\"cropper.isLoading\"><i class=\"fa fa-save\"></i><span> {{ context.buttonSaveCaption }}</span></button></div></div>";
+// css-to-string-loader: transforms styles from css-loader to a string output
+
+// Get the styles
+var styles = __webpack_require__(10);
+
+if (typeof styles === 'string') {
+  // Return an existing string
+  module.exports = styles;
+} else {
+  // Call the custom toString method from css-loader module
+  module.exports = styles.toString();
+}
 
 /***/ },
 /* 14 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"btn-group\" *ngIf=\"!isEmpty\"><a class=\"btn-remove\" (click)=\"remove($event)\"><i class=\"fa fa-trash\"></i></a><a class=\"btn-remove\" (click)=\"editImage($event)\" *ngIf=\"recropable\"><i class=\"fa fa-pencil\"></i></a></div><label #label><div class=\"icon\" *ngIf=\"isEmpty\"><i class=\"fa fa-cloud-upload\"></i></div><img class=\"preview\" *ngIf=\"croppedUrl\" [src]=\"croppedUrl\"><input class=\"ghost\" type=\"file\" (change)=\"openCropperWindow($event.target)\" [disabled]=\"!isEmpty\" accept=\"image/*\"></label>";
+module.exports = "<div class=\"wrapper\"><div class=\"loading-block loader\" *ngIf=\"isLoading\"><div class=\"spinner\"></div></div><div class=\"alert alert-warning\" *ngIf=\"loadError\">{{ loadImageErrorText }}</div><div class=\"cropper\"><img #image alt=\"image\" [src]=\"imageUrl\" (load)=\"imageLoaded($event)\" crossorigin=\"anonymous\" (error)=\"imageLoadError($event)\"></div></div>";
 
 /***/ },
 /* 15 */
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"modal-content\"><div class=\"modal-header\"><button class=\"close\" type=\"button\" (click)=\"dialog.dismiss()\"></button><h4 class=\"modal-title\">{{ context.modalTitle }}</h4></div><div class=\"modal-body\" #body style=\"min-height:250px;padding:0\"><image-cropper #cropper style=\"width: 100%\" [imageUrl]=\"context.imageUrl\" (export)=\"saveData($event)\" [settings]=\"context.settings\" [cropbox]=\"context.cropbox\"></image-cropper></div><div class=\"modal-footer\"><button class=\"btn btn-default\" type=\"button\" (click)=\"dialog.dismiss()\">{{ context.buttonCloseCaption }}</button><button class=\"btn btn-primary\" (click)=\"cropper.exportCanvas()\" type=\"button\" [disabled]=\"cropper.isLoading\"><i class=\"fa fa-save\"></i><span> {{ context.buttonSaveCaption }}</span></button></div></div>";
+
+/***/ },
+/* 16 */
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"btn-group\" *ngIf=\"!isEmpty\"><a class=\"btn-remove\" (click)=\"remove($event)\"><i class=\"fa fa-trash\"></i></a><a class=\"btn-remove\" (click)=\"editImage($event)\" *ngIf=\"recropable\"><i class=\"fa fa-pencil\"></i></a></div><label #label><div class=\"icon\" *ngIf=\"isEmpty\"><i class=\"fa fa-cloud-upload\"></i></div><img class=\"preview\" *ngIf=\"croppedUrl\" [src]=\"croppedUrl\"><input class=\"ghost\" type=\"file\" (change)=\"openCropperWindow($event.target)\" [disabled]=\"!isEmpty\" accept=\"image/*\"></label>";
+
+/***/ },
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 "use strict";
-var cropperjs_1 = __webpack_require__(20);
+var cropperjs_1 = __webpack_require__(21);
 var core_1 = __webpack_require__(0);
 var ImageCropper = (function () {
     function ImageCropper() {
@@ -447,8 +484,8 @@ var ImageCropper = (function () {
         core_1.Component({
             selector: 'image-cropper',
             providers: [],
-            styles: [__webpack_require__(10), __webpack_require__(9)],
-            template: __webpack_require__(12),
+            styles: [__webpack_require__(12), __webpack_require__(11)],
+            template: __webpack_require__(14),
             encapsulation: core_1.ViewEncapsulation.None,
         }), 
         __metadata('design:paramtypes', [])
@@ -459,17 +496,17 @@ exports.ImageCropper = ImageCropper;
 
 
 /***/ },
-/* 16 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 "use strict";
 var core_1 = __webpack_require__(0);
-var forms_1 = __webpack_require__(18);
-var image_cropper_modal_component_1 = __webpack_require__(3);
+var forms_1 = __webpack_require__(19);
+var image_cropper_modal_component_1 = __webpack_require__(4);
 var angular2_modal_1 = __webpack_require__(2);
-var bootstrap_1 = __webpack_require__(4);
-var platform_browser_1 = __webpack_require__(19);
+var bootstrap_1 = __webpack_require__(6);
+var platform_browser_1 = __webpack_require__(20);
 function maybe(value) {
     return (value || {});
 }
@@ -635,8 +672,8 @@ var InputImageCrop = (function () {
                     useExisting: core_1.forwardRef(function () { return InputImageCrop; }),
                     multi: true,
                 }],
-            styles: [__webpack_require__(11)],
-            template: __webpack_require__(14),
+            styles: [__webpack_require__(13)],
+            template: __webpack_require__(16),
         }), 
         __metadata('design:paramtypes', [platform_browser_1.DomSanitizer, bootstrap_1.Modal, core_1.Renderer])
     ], InputImageCrop);
@@ -644,18 +681,6 @@ var InputImageCrop = (function () {
 }());
 exports.InputImageCrop = InputImageCrop;
 
-
-/***/ },
-/* 17 */
-/***/ function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_17__;
-
-/***/ },
-/* 18 */
-/***/ function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_18__;
 
 /***/ },
 /* 19 */
@@ -671,12 +696,20 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_20__;
 
 /***/ },
 /* 21 */
+/***/ function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_21__;
+
+/***/ },
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 "use strict";
-var module_1 = __webpack_require__(5);
+var module_1 = __webpack_require__(7);
 exports.NgCropModule = module_1.NgCropModule;
+var inline_cropper_module_1 = __webpack_require__(3);
+exports.InlineCropperModule = inline_cropper_module_1.InlineCropperModule;
 
 
 /***/ }
