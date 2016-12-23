@@ -13,6 +13,7 @@ export declare class InputImageCrop implements ControlValueAccessor {
     modalTitle: string;
     buttonSaveCaption: string;
     buttonCloseCaption: string;
+    cropperOptions: any;
     private onChange;
     private onTouched;
     private croppedUrl;

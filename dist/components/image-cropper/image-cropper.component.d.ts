@@ -18,6 +18,7 @@ export declare class ImageCropper {
     image: any;
     export: EventEmitter<IImageCropperResult>;
     ready: EventEmitter<{}>;
+    cropperOptions: {};
     private isLoading;
     private cropper;
     private imageElement;

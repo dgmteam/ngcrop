@@ -7,9 +7,11 @@ export declare class ImageCropperModalContext extends BSModalContext {
     modalTitle: string;
     buttonCloseCaption: string;
     buttonSaveCaption: string;
+    cropperOptions: any;
 }
 export declare class ImageCropperModal implements ModalComponent<ImageCropperModalContext> {
     dialog: DialogRef<ImageCropperModalContext>;
+    cropperOptions: any;
     private context;
     constructor(dialog: DialogRef<ImageCropperModalContext>);
     ngOnInit(): void;

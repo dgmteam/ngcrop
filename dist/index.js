@@ -194,6 +194,7 @@ var ImageCropperModal = (function () {
     function ImageCropperModal(dialog) {
         this.dialog = dialog;
         this.context = this.dialog.context;
+        this.cropperOptions = this.context.cropperOptions || { viewMode: 1 };
     }
     ImageCropperModal.prototype.ngOnInit = function () {
     };
@@ -373,7 +374,7 @@ module.exports = "<div class=\"wrapper\"><div class=\"loading-block loader\" *ng
 /* 15 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"modal-content\"><div class=\"modal-header\"><button class=\"close\" type=\"button\" (click)=\"dialog.dismiss()\"></button><h4 class=\"modal-title\">{{ context.modalTitle }}</h4></div><div class=\"modal-body\" #body style=\"min-height:250px;padding:0\"><image-cropper #cropper style=\"width: 100%\" [imageUrl]=\"context.imageUrl\" (export)=\"saveData($event)\" [settings]=\"context.settings\" [cropbox]=\"context.cropbox\"></image-cropper></div><div class=\"modal-footer\"><button class=\"btn btn-default\" type=\"button\" (click)=\"dialog.dismiss()\">{{ context.buttonCloseCaption }}</button><button class=\"btn btn-primary\" (click)=\"cropper.exportCanvas()\" type=\"button\" [disabled]=\"cropper.isLoading\"><i class=\"fa fa-save\"></i><span> {{ context.buttonSaveCaption }}</span></button></div></div>";
+module.exports = "<div class=\"modal-content\"><div class=\"modal-header\"><button class=\"close\" type=\"button\" (click)=\"dialog.dismiss()\"></button><h4 class=\"modal-title\">{{ context.modalTitle }}</h4></div><div class=\"modal-body\" #body style=\"min-height:250px;padding:0\"><image-cropper #cropper style=\"width: 100%\" [imageUrl]=\"context.imageUrl\" (export)=\"saveData($event)\" [settings]=\"context.settings\" [cropbox]=\"context.cropbox\" [cropperOptions]=\"cropperOptions\"></image-cropper></div><div class=\"modal-footer\"><button class=\"btn btn-default\" type=\"button\" (click)=\"dialog.dismiss()\">{{ context.buttonCloseCaption }}</button><button class=\"btn btn-primary\" (click)=\"cropper.exportCanvas()\" type=\"button\" [disabled]=\"cropper.isLoading\"><i class=\"fa fa-save\"></i><span> {{ context.buttonSaveCaption }}</span></button></div></div>";
 
 /***/ },
 /* 16 */
@@ -393,6 +394,7 @@ var ImageCropper = (function () {
     function ImageCropper() {
         this.export = new core_1.EventEmitter();
         this.ready = new core_1.EventEmitter();
+        this.cropperOptions = {};
         this.isLoading = true;
     }
     ImageCropper.prototype.imageLoaded = function (ev) {
@@ -442,12 +444,12 @@ var ImageCropper = (function () {
                 var _a = this.settings, width = _a.width, height = _a.height;
                 aspectRatio = width / height;
             }
-            return {
+            return Object.assign({
                 aspectRatio: aspectRatio,
                 movable: false,
                 scalable: false,
                 zoomable: false,
-            };
+            }, this.cropperOptions);
         },
         enumerable: true,
         configurable: true
@@ -480,6 +482,10 @@ var ImageCropper = (function () {
         core_1.Output(), 
         __metadata('design:type', Object)
     ], ImageCropper.prototype, "ready", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], ImageCropper.prototype, "cropperOptions", void 0);
     ImageCropper = __decorate([
         core_1.Component({
             selector: 'image-cropper',
@@ -605,6 +611,7 @@ var InputImageCrop = (function () {
             buttonSaveCaption: this.buttonSaveCaption,
             buttonCloseCaption: this.buttonCloseCaption,
             size: 'lg',
+            cropperOptions: this.cropperOptions,
         }, bootstrap_1.BSModalContext);
         return this.modal.open(image_cropper_modal_component_1.ImageCropperModal, config)
             .then(function (r) { return r.result; })
@@ -660,6 +667,10 @@ var InputImageCrop = (function () {
         core_1.Input(), 
         __metadata('design:type', Object)
     ], InputImageCrop.prototype, "buttonCloseCaption", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], InputImageCrop.prototype, "cropperOptions", void 0);
     __decorate([
         core_1.ViewChild('label'), 
         __metadata('design:type', core_1.ElementRef)
