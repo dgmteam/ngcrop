@@ -9,6 +9,7 @@ export class ImageCropperModalContext extends BSModalContext {
 	modalTitle: string
 	buttonCloseCaption: string
 	buttonSaveCaption: string
+	cropperOptions: any
 }
 
 @Component({
@@ -18,12 +19,14 @@ export class ImageCropperModalContext extends BSModalContext {
 	templateUrl: './image-cropper-modal.component.jade',
 })
 export class ImageCropperModal implements ModalComponent<ImageCropperModalContext> {
+	cropperOptions
 	private context
 
 	constructor(
 		public dialog: DialogRef<ImageCropperModalContext>
 	) {
 		this.context = this.dialog.context
+		this.cropperOptions = this.context.cropperOptions || { viewMode: 1}
 	}
 
 	ngOnInit() {

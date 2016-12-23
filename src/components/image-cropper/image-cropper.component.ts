@@ -35,6 +35,7 @@ export class ImageCropper {
 	@ViewChild('image') image
 	@Output() export = new EventEmitter<IImageCropperResult>()
 	@Output() ready = new EventEmitter()
+	@Input() cropperOptions = {}
 	private isLoading = true
 	private cropper: Cropper
 	private imageElement: HTMLImageElement
@@ -92,11 +93,11 @@ export class ImageCropper {
 			aspectRatio = width / height
 		}
 
-		return {
+		return Object.assign({
 			aspectRatio,
 			movable: false,
 			scalable: false,
 			zoomable: false,
-		}
+		}, this.cropperOptions)
 	}
 }

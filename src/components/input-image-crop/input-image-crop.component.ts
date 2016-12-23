@@ -27,6 +27,7 @@ export class InputImageCrop implements ControlValueAccessor {
 	@Input() modalTitle = 'Crop image'
 	@Input() buttonSaveCaption = 'Save'
 	@Input() buttonCloseCaption = 'Close'
+	@Input() cropperOptions
 	private onChange: Function
 	private onTouched: Function
 	private croppedUrl
@@ -139,6 +140,7 @@ export class InputImageCrop implements ControlValueAccessor {
 			buttonSaveCaption: this.buttonSaveCaption,
 			buttonCloseCaption: this.buttonCloseCaption,
 			size: 'lg',
+			cropperOptions: this.cropperOptions,
 		}, BSModalContext)
 		return this.modal.open(ImageCropperModal, config)
 			.then(r => r.result)
