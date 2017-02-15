@@ -1,3 +1,18 @@
+<a name="0.0.4"></a>
+## [0.0.4](https://github.com/mahpah/ngcrop/compare/v0.0.1-alpha.0...v0.0.4) (2017-02-15)
+
+
+### Bug Fixes
+
+* **input:** cant select same image right after delete ([36b2c9a](https://github.com/mahpah/ngcrop/commit/36b2c9a))
+
+
+### Features
+
+* **input:** remove view encapsulation ([6ad4164](https://github.com/mahpah/ngcrop/commit/6ad4164))
+
+
+
 <a name="0.0.3"></a>
 ## [0.0.3](https://github.com/mahpah/ngcrop/compare/v0.0.1-alpha.0...v0.0.3) (2016-12-23)
 
