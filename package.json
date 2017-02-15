@@ -31,7 +31,7 @@
     "@types/node": "^6.0.46",
     "angular2-template-loader": "^0.6.0",
     "awesome-typescript-loader": "^2.2.4",
-    "codelyzer": "^1.0.0-beta.3",
+    "codelyzer": "^2.0.0",
     "css-loader": "^0.25.0",
     "css-to-string-loader": "^0.1.2",
     "extract-text-webpack-plugin": "2.0.0-beta.4",
@@ -46,7 +46,7 @@
     "sass-loader": "^4.0.2",
     "ts-helpers": "^1.1.2",
     "ts-loader": "^1.0.0",
-    "tslint": "^3.15.1",
+    "tslint": "^4.4.2",
     "typescript": "^2.0.6",
     "webpack": "2.1.0-beta.25",
     "webpack-dev-server": "2.1.0-beta.10",
@@ -58,10 +58,13 @@
     "@angular/core": "^2.1.2",
     "@angular/forms": "^2.1.2",
     "@angular/platform-browser": "^2.1.2",
+    "angular2-modal": "^2.0.3",
     "core-js": "^2.4.1",
     "cropperjs": "^0.8.1",
-    "rxjs": "5.0.0-beta.12",
-    "zone.js": "^0.6.26"
+    "rxjs": "^5.1.1",
+    "tslint": "^4.4.2",
+    "typescript": "^2.2.0",
+    "zone.js": "^0.7.7"
   },
   "peerDependencies": {
     "angular2-modal": "^2.0.1"

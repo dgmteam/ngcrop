@@ -154,22 +154,21 @@ var image_cropper_component_1 = __webpack_require__(17);
 var InlineCropperModule = (function () {
     function InlineCropperModule() {
     }
-    InlineCropperModule = __decorate([
-        core_1.NgModule({
-            imports: [
-                common_1.CommonModule,
-            ],
-            declarations: [
-                image_cropper_component_1.ImageCropper,
-            ],
-            exports: [
-                image_cropper_component_1.ImageCropper,
-            ],
-        }), 
-        __metadata('design:paramtypes', [])
-    ], InlineCropperModule);
     return InlineCropperModule;
 }());
+InlineCropperModule = __decorate([
+    core_1.NgModule({
+        imports: [
+            common_1.CommonModule,
+        ],
+        declarations: [
+            image_cropper_component_1.ImageCropper,
+        ],
+        exports: [
+            image_cropper_component_1.ImageCropper,
+        ],
+    })
+], InlineCropperModule);
 exports.InlineCropperModule = InlineCropperModule;
 
 
@@ -185,7 +184,7 @@ var bootstrap_1 = __webpack_require__(6);
 var ImageCropperModalContext = (function (_super) {
     __extends(ImageCropperModalContext, _super);
     function ImageCropperModalContext() {
-        _super.apply(this, arguments);
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     return ImageCropperModalContext;
 }(bootstrap_1.BSModalContext));
@@ -203,17 +202,17 @@ var ImageCropperModal = (function () {
     ImageCropperModal.prototype.saveData = function (data) {
         this.dialog.close(data);
     };
-    ImageCropperModal = __decorate([
-        core_1.Component({
-            selector: 'image-cropper-modal',
-            providers: [],
-            // styles: [require('./image-cropper-modal.component.scss')],
-            template: __webpack_require__(15),
-        }), 
-        __metadata('design:paramtypes', [angular2_modal_1.DialogRef])
-    ], ImageCropperModal);
     return ImageCropperModal;
 }());
+ImageCropperModal = __decorate([
+    core_1.Component({
+        selector: 'image-cropper-modal',
+        providers: [],
+        // styles: [require('./image-cropper-modal.component.scss')],
+        template: __webpack_require__(15),
+    }),
+    __metadata("design:paramtypes", [angular2_modal_1.DialogRef])
+], ImageCropperModal);
 exports.ImageCropperModal = ImageCropperModal;
 
 
@@ -244,30 +243,29 @@ var inline_cropper_module_1 = __webpack_require__(3);
 var NgCropModule = (function () {
     function NgCropModule() {
     }
-    NgCropModule = __decorate([
-        core_1.NgModule({
-            imports: [
-                common_1.CommonModule,
-                angular2_modal_1.ModalModule,
-                inline_cropper_module_1.InlineCropperModule,
-            ],
-            declarations: [
-                image_cropper_modal_component_1.ImageCropperModal,
-                input_image_crop_component_1.InputImageCrop,
-            ],
-            exports: [
-                inline_cropper_module_1.InlineCropperModule,
-                image_cropper_modal_component_1.ImageCropperModal,
-                input_image_crop_component_1.InputImageCrop,
-            ],
-            entryComponents: [
-                image_cropper_modal_component_1.ImageCropperModal,
-            ],
-        }), 
-        __metadata('design:paramtypes', [])
-    ], NgCropModule);
     return NgCropModule;
 }());
+NgCropModule = __decorate([
+    core_1.NgModule({
+        imports: [
+            common_1.CommonModule,
+            angular2_modal_1.ModalModule,
+            inline_cropper_module_1.InlineCropperModule,
+        ],
+        declarations: [
+            image_cropper_modal_component_1.ImageCropperModal,
+            input_image_crop_component_1.InputImageCrop,
+        ],
+        exports: [
+            inline_cropper_module_1.InlineCropperModule,
+            image_cropper_modal_component_1.ImageCropperModal,
+            input_image_crop_component_1.InputImageCrop,
+        ],
+        entryComponents: [
+            image_cropper_modal_component_1.ImageCropperModal,
+        ],
+    })
+], NgCropModule);
 exports.NgCropModule = NgCropModule;
 
 
@@ -308,7 +306,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, ":host {\n  display: block;\n  overflow: hidden;\n  position: relative;\n}\n\n.preview {\n  width: 100%;\n}\n\nlabel {\n  position: relative;\n  min-height: 100px;\n  width: 100%;\n  background-color: #ddd;\n  cursor: pointer;\n  display: inline-block;\n}\n\nlabel:hover .icon {\n  color: #fff;\n}\n\nlabel .icon {\n  font-size: 4em;\n  color: rgba(255, 255, 255, 0.7);\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n\ninput {\n  position: absolute;\n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n\n.btn-group {\n  position: absolute;\n  right: .5em;\n  top: 1em;\n  z-index: 10;\n}\n\n.btn-group .btn-remove {\n  position: relative;\n  line-height: 1;\n  padding: .5em;\n  border-radius: 50%;\n  background-color: rgba(255, 255, 255, 0.4);\n  color: #555;\n  cursor: pointer;\n  display: inline-block;\n  width: 2em;\n  text-align: center;\n}\n\n.btn-group .btn-remove + .btn-remove {\n  margin-left: .5em;\n}\n\n.btn-group .btn-remove:hover {\n  background-color: rgba(255, 255, 255, 0.9);\n}", ""]);
+exports.push([module.i, ".dgm-bs3-ngcrop {\n  display: block;\n  overflow: hidden;\n  position: relative;\n}\n\n.dgm-bs3-ngcrop .preview {\n  width: 100%;\n}\n\n.dgm-bs3-ngcrop label {\n  position: relative;\n  height: 100%;\n  width: 100%;\n  background-color: #ddd;\n  cursor: pointer;\n  display: inline-block;\n}\n\n.dgm-bs3-ngcrop label:hover .icon {\n  color: #fff;\n}\n\n.dgm-bs3-ngcrop label .icon {\n  font-size: 4em;\n  color: rgba(255, 255, 255, 0.7);\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n\n.dgm-bs3-ngcrop input {\n  position: absolute;\n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n\n.dgm-bs3-ngcrop .btn-group {\n  position: absolute;\n  right: .5em;\n  top: 1em;\n  z-index: 10;\n}\n\n.dgm-bs3-ngcrop .btn-group .btn-remove {\n  position: relative;\n  line-height: 1;\n  padding: .5em;\n  border-radius: 50%;\n  background-color: rgba(255, 255, 255, 0.4);\n  color: #555;\n  cursor: pointer;\n  display: inline-block;\n  width: 2em;\n  text-align: center;\n}\n\n.dgm-bs3-ngcrop .btn-group .btn-remove + .btn-remove {\n  margin-left: .5em;\n}\n\n.dgm-bs3-ngcrop .btn-group .btn-remove:hover {\n  background-color: rgba(255, 255, 255, 0.9);\n}", ""]);
 
 // exports
 
@@ -374,13 +372,13 @@ module.exports = "<div class=\"wrapper\"><div class=\"loading-block loader\" *ng
 /* 15 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"modal-content\"><div class=\"modal-header\"><button class=\"close\" type=\"button\" (click)=\"dialog.dismiss()\"></button><h4 class=\"modal-title\">{{ context.modalTitle }}</h4></div><div class=\"modal-body\" #body style=\"min-height:250px;padding:0\"><image-cropper #cropper style=\"width: 100%\" [imageUrl]=\"context.imageUrl\" (export)=\"saveData($event)\" [settings]=\"context.settings\" [cropbox]=\"context.cropbox\" [cropperOptions]=\"cropperOptions\"></image-cropper></div><div class=\"modal-footer\"><button class=\"btn btn-default\" type=\"button\" (click)=\"dialog.dismiss()\">{{ context.buttonCloseCaption }}</button><button class=\"btn btn-primary\" (click)=\"cropper.exportCanvas()\" type=\"button\" [disabled]=\"cropper.isLoading\"><i class=\"fa fa-save\"></i><span> {{ context.buttonSaveCaption }}</span></button></div></div>";
+module.exports = "<div class=\"modal-content\"><div class=\"modal-header\"><button class=\"close\" type=\"button\" (click)=\"dialog.dismiss()\"></button><h4 class=\"modal-title\">{{ context.modalTitle }}</h4></div><div class=\"modal-body\" #body style=\"min-height:250px;padding:0;\"><image-cropper #cropper style=\"width: 100%;\" [imageUrl]=\"context.imageUrl\" (export)=\"saveData($event)\" [settings]=\"context.settings\" [cropbox]=\"context.cropbox\" [cropperOptions]=\"cropperOptions\"></image-cropper></div><div class=\"modal-footer\"><button class=\"btn btn-default\" type=\"button\" (click)=\"dialog.dismiss()\">{{ context.buttonCloseCaption }}</button><button class=\"btn btn-primary\" (click)=\"cropper.exportCanvas()\" type=\"button\" [disabled]=\"cropper.isLoading\"><i class=\"fa fa-save\"></i><span> {{ context.buttonSaveCaption }}</span></button></div></div>";
 
 /***/ },
 /* 16 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"btn-group\" *ngIf=\"!isEmpty\"><a class=\"btn-remove\" (click)=\"remove($event)\"><i class=\"fa fa-trash\"></i></a><a class=\"btn-remove\" (click)=\"editImage($event)\" *ngIf=\"recropable\"><i class=\"fa fa-pencil\"></i></a></div><label #label><div class=\"icon\" *ngIf=\"isEmpty\"><i class=\"fa fa-cloud-upload\"></i></div><img class=\"preview\" *ngIf=\"croppedUrl\" [src]=\"croppedUrl\"><input class=\"ghost\" type=\"file\" (change)=\"openCropperWindow($event.target)\" [disabled]=\"!isEmpty\" accept=\"image/*\"></label>";
+module.exports = "<div class=\"dgm-bs3-ngcrop\" #container><div class=\"btn-group\" *ngIf=\"!isEmpty\"><a class=\"btn-remove\" (click)=\"remove($event)\"><i class=\"fa fa-trash\"></i></a><a class=\"btn-remove\" (click)=\"editImage($event)\" *ngIf=\"recropable\"><i class=\"fa fa-pencil\"></i></a></div><label><div class=\"icon\" *ngIf=\"isEmpty\"><i class=\"fa fa-cloud-upload\"></i></div><img class=\"preview\" *ngIf=\"croppedUrl\" [src]=\"croppedUrl\"><input class=\"ghost\" type=\"file\" (change)=\"openCropperWindow($event.target)\" [disabled]=\"!isEmpty\" accept=\"image/*\"></label></div>";
 
 /***/ },
 /* 17 */
@@ -454,50 +452,49 @@ var ImageCropper = (function () {
         enumerable: true,
         configurable: true
     });
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], ImageCropper.prototype, "imageUrl", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], ImageCropper.prototype, "settings", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], ImageCropper.prototype, "cropbox", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
-    ], ImageCropper.prototype, "loadImageErrorText", void 0);
-    __decorate([
-        core_1.ViewChild('image'), 
-        __metadata('design:type', Object)
-    ], ImageCropper.prototype, "image", void 0);
-    __decorate([
-        core_1.Output(), 
-        __metadata('design:type', Object)
-    ], ImageCropper.prototype, "export", void 0);
-    __decorate([
-        core_1.Output(), 
-        __metadata('design:type', Object)
-    ], ImageCropper.prototype, "ready", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], ImageCropper.prototype, "cropperOptions", void 0);
-    ImageCropper = __decorate([
-        core_1.Component({
-            selector: 'image-cropper',
-            providers: [],
-            styles: [__webpack_require__(12), __webpack_require__(11)],
-            template: __webpack_require__(14),
-            encapsulation: core_1.ViewEncapsulation.None,
-        }), 
-        __metadata('design:paramtypes', [])
-    ], ImageCropper);
     return ImageCropper;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], ImageCropper.prototype, "imageUrl", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], ImageCropper.prototype, "settings", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], ImageCropper.prototype, "cropbox", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], ImageCropper.prototype, "loadImageErrorText", void 0);
+__decorate([
+    core_1.ViewChild('image'),
+    __metadata("design:type", Object)
+], ImageCropper.prototype, "image", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], ImageCropper.prototype, "export", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], ImageCropper.prototype, "ready", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], ImageCropper.prototype, "cropperOptions", void 0);
+ImageCropper = __decorate([
+    core_1.Component({
+        selector: 'image-cropper',
+        providers: [],
+        styles: [__webpack_require__(12), __webpack_require__(11)],
+        template: __webpack_require__(14),
+        encapsulation: core_1.ViewEncapsulation.None,
+    })
+], ImageCropper);
 exports.ImageCropper = ImageCropper;
 
 
@@ -516,7 +513,7 @@ var platform_browser_1 = __webpack_require__(20);
 function maybe(value) {
     return (value || {});
 }
-var InputImageCrop = (function () {
+var InputImageCrop = InputImageCrop_1 = (function () {
     function InputImageCrop(sanitizer, modal, renderer) {
         this.sanitizer = sanitizer;
         this.modal = modal;
@@ -548,6 +545,7 @@ var InputImageCrop = (function () {
     InputImageCrop.prototype.openCropperWindow = function (input) {
         var _this = this;
         var file = input.files[0];
+        input.value = '';
         if (!file) {
             return;
         }
@@ -560,7 +558,6 @@ var InputImageCrop = (function () {
         this.openModal(imageUrl)
             .then(function (result) {
             if (!result) {
-                input.value = '';
                 return;
             }
             _this.cropbox = result.cropData;
@@ -574,11 +571,22 @@ var InputImageCrop = (function () {
         URL.revokeObjectURL(this.croppedUrl);
     };
     InputImageCrop.prototype.ngAfterViewInit = function () {
-        var label = this.labelRef.nativeElement;
-        var width = label.offsetWidth;
+        var _this = this;
+        var label = this.containerRef.nativeElement;
+        var setLabelSize = function (_a) {
+            var width = _a.width, height = _a.height;
+            _this.renderer.setElementStyle(label, 'height', height + "px");
+            _this.renderer.setElementStyle(label, 'width', width + "px");
+        };
         if (this.settings) {
-            var height = this.settings.height / this.settings.width * width;
-            this.renderer.setElementStyle(label, 'minHeight', height + "px");
+            var width = label.offsetWidth;
+            if (!width) {
+                setLabelSize(this.settings);
+                return;
+            }
+            var height = Math.min(this.settings.height / this.settings.width * width, this.settings.height);
+            width = height * this.settings.width / this.settings.height;
+            setLabelSize({ width: width, height: height });
         }
     };
     InputImageCrop.prototype.remove = function (ev) {
@@ -647,50 +655,54 @@ var InputImageCrop = (function () {
         ret.relativeUrl = this.croppedRelativeUrl;
         return ret;
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], InputImageCrop.prototype, "settings", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Boolean)
-    ], InputImageCrop.prototype, "recropable", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], InputImageCrop.prototype, "modalTitle", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], InputImageCrop.prototype, "buttonSaveCaption", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], InputImageCrop.prototype, "buttonCloseCaption", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], InputImageCrop.prototype, "cropperOptions", void 0);
-    __decorate([
-        core_1.ViewChild('label'), 
-        __metadata('design:type', core_1.ElementRef)
-    ], InputImageCrop.prototype, "labelRef", void 0);
-    InputImageCrop = __decorate([
-        core_1.Component({
-            selector: 'input-image-crop',
-            providers: [{
-                    provide: forms_1.NG_VALUE_ACCESSOR,
-                    useExisting: core_1.forwardRef(function () { return InputImageCrop; }),
-                    multi: true,
-                }],
-            styles: [__webpack_require__(13)],
-            template: __webpack_require__(16),
-        }), 
-        __metadata('design:paramtypes', [platform_browser_1.DomSanitizer, bootstrap_1.Modal, core_1.Renderer])
-    ], InputImageCrop);
     return InputImageCrop;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], InputImageCrop.prototype, "settings", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], InputImageCrop.prototype, "recropable", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], InputImageCrop.prototype, "modalTitle", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], InputImageCrop.prototype, "buttonSaveCaption", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], InputImageCrop.prototype, "buttonCloseCaption", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], InputImageCrop.prototype, "cropperOptions", void 0);
+__decorate([
+    core_1.ViewChild('container'),
+    __metadata("design:type", core_1.ElementRef)
+], InputImageCrop.prototype, "containerRef", void 0);
+InputImageCrop = InputImageCrop_1 = __decorate([
+    core_1.Component({
+        selector: 'input-image-crop',
+        providers: [{
+                provide: forms_1.NG_VALUE_ACCESSOR,
+                useExisting: core_1.forwardRef(function () { return InputImageCrop_1; }),
+                multi: true,
+            }],
+        styles: [__webpack_require__(13)],
+        template: __webpack_require__(16),
+        encapsulation: core_1.ViewEncapsulation.None,
+    }),
+    __metadata("design:paramtypes", [platform_browser_1.DomSanitizer,
+        bootstrap_1.Modal,
+        core_1.Renderer])
+], InputImageCrop);
 exports.InputImageCrop = InputImageCrop;
+var InputImageCrop_1;
 
 
 /***/ },

@@ -22,7 +22,7 @@ export declare class InputImageCrop implements ControlValueAccessor {
     private origin;
     private fileName;
     private cropbox;
-    private labelRef;
+    private containerRef;
     constructor(sanitizer: DomSanitizer, modal: Modal, renderer: Renderer);
     writeValue(value?: IImageView | IImageCropView): void;
     registerOnChange(fn: any): void;

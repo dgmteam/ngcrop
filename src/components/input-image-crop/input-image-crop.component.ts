@@ -1,4 +1,4 @@
-import { Component, forwardRef, Input, ViewChild, ElementRef, Renderer } from '@angular/core'
+import { Component, forwardRef, Input, ViewChild, ElementRef, Renderer, ViewEncapsulation } from '@angular/core'
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms'
 import { ImageCropperModal } from './image-cropper-modal/image-cropper-modal.component'
 import { overlayConfigFactory } from 'angular2-modal'
@@ -20,6 +20,7 @@ function maybe<T>(value) {
 	}],
 	styleUrls: ['./input-image-crop.component.scss'],
 	templateUrl: './input-image-crop.component.jade',
+	encapsulation: ViewEncapsulation.None,
 })
 export class InputImageCrop implements ControlValueAccessor {
 	@Input() settings: IImageCropperSetting
@@ -39,7 +40,7 @@ export class InputImageCrop implements ControlValueAccessor {
 	}
 	private fileName: string
 	private cropbox
-	@ViewChild('label') private labelRef: ElementRef
+	@ViewChild('container') private containerRef: ElementRef
 
 	constructor(
 		private sanitizer: DomSanitizer,
@@ -101,13 +102,23 @@ export class InputImageCrop implements ControlValueAccessor {
 	}
 
 	ngAfterViewInit() {
-		let label = this.labelRef.nativeElement as HTMLLabelElement
-		let width = label.offsetWidth
-		if (this.settings) {
-			let height = this.settings.height / this.settings.width * width
-			this.renderer.setElementStyle(label, 'minHeight', `${height}px`)
+		let label = this.containerRef.nativeElement as HTMLDivElement
+		const setLabelSize = ({width, height}) => {
+			this.renderer.setElementStyle(label, 'height', `${height}px`)
+			this.renderer.setElementStyle(label, 'width', `${width}px`)
 		}
 
+		if (this.settings) {
+			let width = label.offsetWidth
+			if (!width) {
+				setLabelSize(this.settings)
+				return
+			}
+
+			let height = Math.min(this.settings.height / this.settings.width * width, this.settings.height)
+			width = height * this.settings.width / this.settings.height
+			setLabelSize({width, height})
+		}
 	}
 
 	remove(ev: Event) {
