@@ -1,6 +1,6 @@
 {
   "name": "dgm-bs3-ngcrop",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Angular2 component wrapper for CropperJS",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -47,9 +47,9 @@
     "ts-helpers": "^1.1.2",
     "ts-loader": "^1.0.0",
     "tslint": "^4.4.2",
-    "typescript": "^2.0.6",
     "webpack": "2.1.0-beta.25",
     "webpack-dev-server": "2.1.0-beta.10",
+    "typescript": "^2.2.0",
     "webpack-merge": "^0.15.0"
   },
   "dependencies": {
@@ -58,15 +58,13 @@
     "@angular/core": "^2.1.2",
     "@angular/forms": "^2.1.2",
     "@angular/platform-browser": "^2.1.2",
-    "angular2-modal": "^2.0.3",
     "core-js": "^2.4.1",
     "cropperjs": "^0.8.1",
     "rxjs": "^5.1.1",
     "tslint": "^4.4.2",
-    "typescript": "^2.2.0",
     "zone.js": "^0.7.7"
   },
   "peerDependencies": {
-    "angular2-modal": "^2.0.1"
+    "angular2-modal": "^2.0.3"
   }
 }
