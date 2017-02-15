@@ -73,6 +73,7 @@ export class InputImageCrop implements ControlValueAccessor {
 
 	openCropperWindow(input: HTMLInputElement) {
 		let file = input.files[0]
+		input.value = ''
 		if (!file) {
 			return
 		}
@@ -85,7 +86,6 @@ export class InputImageCrop implements ControlValueAccessor {
 		this.openModal(imageUrl)
 			.then(result => {
 				if (!result) { // clear input
-					input.value = ''
 					return
 				}
 				this.cropbox = result.cropData
